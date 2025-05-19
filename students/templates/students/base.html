@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management System</title>
+  <link rel="icon" href="{% static 'icon/school.svg' %}" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'index' %}">
+        <i class="fa-solid fa-school"></i> <b>Student Management System</b>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+        aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'index' %}">
+              <i class="fa-solid fa-list"></i> All Student
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'add' %}">
+              <i class="fa-solid fa-plus"></i> Add Student
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Attention -->
+  <div class="container my-3">
+    <div class="alert alert-warning text-center fw-bold">
+      <marquee behavior="scroll" direction="left" scrollamount="8">
+        ⚠️ Notice: This Student Management System has no authentication. Anyone can create, read, update, and delete
+        data! ⚠️
+      </marquee>
+    </div>
+  </div>
+
+  <div class="container">
+    {% block body %}
+
+    {% endblock %}
+  </div>
+
+  <br>
+  <br>
+  <hr>
+  <footer class="mx-auto mb-4 d-flex align-items-center gap-3">
+    <a href="https://github.com/neural-bot/Django_Student_Management_App" target="_blank" class="mt-auto">
+      <i class="fa-brands fa-github"> Github</i>
+    </a>
+    <div class="text-center">
+      <span class="fw-bold">
+        Copyright &copy;
+        <script>document.write(new Date().getFullYear())</script> to Md Najib Ul Azam Mahi
+      </span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
