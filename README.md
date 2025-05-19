@@ -1,5 +1,5 @@
 # Student Management System with Django
-## Project URL:
+## Project URL: https://student-management-system-app-by-django-prj1qims0.vercel.app/
 
 Welcome to the **Student Management System with Django**, a Django-based web application for managing student records. This project demonstrates a fully functional CRUD (Create, Read, Update, Delete) system with a clean and responsive UI powered by Bootstrap.
 
